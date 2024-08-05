@@ -38,7 +38,7 @@ python main.py
 
 ## Requirements
 
-- torch
-- torchvision
-- numpy
-- matplotlib
+- torch==2.0.1
+- torchvision==0.15.2
+- numpy==1.22.0
+- matplotlib==3.7.1
