@@ -1,6 +1,6 @@
 # Prostate Segmentation using U-Net
 
-This project implements a U-Net model for the segmentation of prostate images. It is designed to demonstrate the effectiveness of U-Net architectures for medical image analysis tasks, particularly in segmenting complex structures from varied backgrounds.
+This repository contains the implementation of a U-Net model for prostate segmentation. The project includes data preprocessing, model training, evaluation, and inference scripts.
 
 ## Dataset
 
@@ -10,7 +10,62 @@ The dataset used in this project is sourced from the [SAML Dataset](https://liuq
 
 The U-Net model is a convolutional neural network originally designed for biomedical image segmentation. The architecture is structured as a U-shaped network to efficiently learn from a small number of images while achieving precise localizations. Its design includes a contracting path to capture context and an expansive path that enables precise localization, making it highly effective for tasks like medical image segmentation.
 
+## Repository Structure
+
+- `dataloader.py`: Script for loading and preprocessing the data.
+- `train.ipynb`: Jupyter notebook for training the U-Net model.
+- `evaluation.ipynb`: Jupyter notebook for evaluating the trained model.
+- `inference.ipynb`: Jupyter notebook for running inference using the trained model.
+- `main.py`: Main script to run the training and evaluation pipeline.
+- `model.py`: Definition of the U-Net model architecture.
+- `pre_process.ipynb`: Jupyter notebook for data preprocessing.
+- `pre_process.py`: Script for data preprocessing.
+- `README.md`: Documentation for the project.
+- `test.py`: Script for testing the model.
+- `utils.py`: Utility functions used across the project.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- PyTorch
+- NumPy
+- Matplotlib
+- Other dependencies listed in `requirements.txt` (if available)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd prostate-segmentation-unet
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Training
+
+To train the U-Net model, use the `train.ipynb` notebook or run the `main.py` script.
+
+### Evaluation
+
+Evaluate the trained model using the `evaluation.ipynb` notebook.
+
+### Inference
+
+Run inference on new data using the `inference.ipynb` notebook.
+
 ## Results
+
+The U-Net model achieves high accuracy in segmenting prostate regions from medical images. Refer to the `evaluation.ipynb` notebook for detailed metrics and visualizations.
 
 Here is a visualization of the model's segmentation output compared to the ground truth:
 
@@ -21,24 +76,11 @@ Here is a visualization of the model's segmentation output compared to the groun
 - **Main Dataset:** [SAML Dataset Link](https://drive.google.com/file/d/1TtrjnlnJ1yqr5m4LUGMelKTQXtvZaru-/view?usp=sharing)
 - **Processed Dataset:** [Processed Dataset](https://drive.google.com/file/d/16Xrat8Sop6E0B6eK4TMTAz4Wu6VaAPPD/view?usp=sharing)
 
-## Project Structure
+## License
 
-- `main.py`: The primary script for training the U-Net model. It integrates the model setup, training loop, and saving the trained model.
-- `model.py`: Contains the implementation of the U-Net model architecture.
-- `dataloader.py`: Defines the PyTorch `Dataset` and `DataLoader` for handling the loading and preprocessing of image data.
-- `pre_process.ipynb`: A Jupyter notebook used for the initial preprocessing of the dataset.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## How to Run
+## Acknowledgments
 
-To run the training script, simply execute the following command:
-
-```bash
-python main.py
-```
-
-## Requirements
-
-- torch==2.0.1
-- torchvision==0.15.2
-- numpy==1.22.0
-- matplotlib==3.7.1
+- The U-Net architecture is based on the paper "U-Net: Convolutional Networks for Biomedical Image Segmentation" by Olaf Ronneberger et al.
+- Special thanks to the contributors and open-source libraries used in this project.

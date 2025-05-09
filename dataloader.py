@@ -27,8 +27,8 @@ class ProstateDataset(Dataset):
 
         img_path = self.images[idx]
         mask_path = self.masks[idx]
-        image = Image.open(img_path).convert('L')  # Convert to grayscale
-        mask = Image.open(mask_path).convert('L')  # Convert to grayscale (binary mask)
+        image = Image.open(img_path).convert('L')  # Convert to grayscale using pillow library
+        mask = Image.open(mask_path).convert('L')  # Convert to grayscale (binary mask) 'L' stands for "luminance" 
 
         sample = {'image': image, 'mask': mask}
 
