@@ -44,9 +44,13 @@ The U-Net model is a convolutional neural network originally designed for biomed
    ```bash
    cd prostate-segmentation-unet
    ```
-3. Install the required dependencies:
+3. Set up the environment using the provided YAML file:
    ```bash
-   pip install -r requirements.txt
+   conda env create -f prostate_mri_env.yaml
+   ```
+4. Activate the environment:
+   ```bash
+   conda activate prostate_mri_env
    ```
 
 ## Usage
@@ -67,9 +71,9 @@ Run inference on new data using the `inference.ipynb` notebook.
 
 The U-Net model achieves high accuracy in segmenting prostate regions from medical images. Refer to the `evaluation.ipynb` notebook for detailed metrics and visualizations.
 
-Here is a visualization of the model's segmentation output compared to the ground truth:
+## Visualization
 
-![Segmentation Results](result/Figure_2.png)
+Visualization of the result can be found in the `inference.ipynb` notebook.
 
 ## Dataset Links
 
